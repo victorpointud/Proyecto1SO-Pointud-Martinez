@@ -3,6 +3,7 @@ package GUI;
 
 import main.Global;
 
+
 /*
 * made by: victorpointud
 */
@@ -89,7 +90,6 @@ public class MainMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ConfigurationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfigurationButtonActionPerformed
-        // TODO add your handling code here:
         settingsWindows.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_ConfigurationButtonActionPerformed
@@ -106,8 +106,8 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_BothButtonActionPerformed
 
     private void HPButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HPButtonActionPerformed
-         GUIFunctions.openSim(0);
-         Global.mainMenu.setVisible(false);
+        GUIFunctions.openSim(0);
+        Global.mainMenu.setVisible(false);
     }//GEN-LAST:event_HPButtonActionPerformed
 
     public static void main(String args[]) {
