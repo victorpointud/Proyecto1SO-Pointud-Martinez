@@ -150,7 +150,7 @@ public class CompanyRules {
         return companyNumber;
     }
 
-    public void setCompanyEnum(CompanyNumber companyEnum) {
-        this.companyNumber = companyEnum;
+    public void setCompanyNumber(CompanyNumber companyNumber) {
+        this.companyNumber = companyNumber;
     }
 }
