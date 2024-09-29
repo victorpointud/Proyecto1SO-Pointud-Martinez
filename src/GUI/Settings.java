@@ -58,24 +58,19 @@ public class Settings extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         SaveButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
         timeLeft = new javax.swing.JSpinner();
         dellBasePlates = new javax.swing.JSpinner();
         dellCPUs = new javax.swing.JSpinner();
@@ -91,8 +86,15 @@ public class Settings extends javax.swing.JFrame {
         BackButton = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         dellGraphicsCards = new javax.swing.JSpinner();
+        jLabel20 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         hpIntegrators = new javax.swing.JSpinner();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -108,168 +110,157 @@ public class Settings extends javax.swing.JFrame {
                 guardar(evt);
             }
         });
-        jPanel1.add(SaveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 460, 90, 40));
+        jPanel1.add(SaveButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 470, 130, 40));
 
-        jLabel1.setFont(new java.awt.Font("BM Yeonsung", 3, 36)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("HP");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, 230, 70));
-
-        jLabel2.setFont(new java.awt.Font("BM Yeonsung", 3, 36)); // NOI18N
-        jLabel2.setText("CONFIGURACIÓN");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, 490, 70));
-
-        jLabel3.setFont(new java.awt.Font("BM Yeonsung", 3, 36)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Algerian", 3, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Tiempo");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 270, 170, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 90, 170, -1));
 
-        jLabel4.setFont(new java.awt.Font("BM Yeonsung", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Integradores");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("BM Yeonsung", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Dias para finalizar");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 340, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 220, -1, -1));
 
-        jLabel6.setFont(new java.awt.Font("BM Yeonsung", 1, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("CPUs");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("BM Yeonsung", 1, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("RAMs");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("BM Yeonsung", 1, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Fuentes de Energía");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, -1, -1));
 
-        jLabel9.setFont(new java.awt.Font("BM Yeonsung", 3, 36)); // NOI18N
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("Trabajadores");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 140, 290, -1));
-
-        jLabel10.setFont(new java.awt.Font("BM Yeonsung", 1, 18)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Placas Base");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, -1, -1));
 
-        jLabel11.setFont(new java.awt.Font("BM Yeonsung", 1, 18)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Duración de dias");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 230, -1, -1));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 160, -1, -1));
 
-        jLabel13.setFont(new java.awt.Font("BM Yeonsung", 1, 18)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Tarjetas Gráficas");
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 450, -1, -1));
 
-        jLabel15.setFont(new java.awt.Font("BM Yeonsung", 1, 18)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("CPUs");
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, -1, -1));
 
-        jLabel16.setFont(new java.awt.Font("BM Yeonsung", 1, 18)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("RAMs");
         jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 390, -1, -1));
 
-        jLabel17.setFont(new java.awt.Font("BM Yeonsung", 1, 18)); // NOI18N
+        jLabel17.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Fuentes de Energía");
         jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 420, -1, -1));
 
-        jLabel18.setFont(new java.awt.Font("BM Yeonsung", 3, 36)); // NOI18N
-        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setText("Trabajadores");
-        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 360, 310, -1));
-
-        jLabel19.setFont(new java.awt.Font("BM Yeonsung", 1, 18)); // NOI18N
+        jLabel19.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("Placas Base");
         jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 330, -1, -1));
-
-        jLabel21.setFont(new java.awt.Font("BM Yeonsung", 3, 36)); // NOI18N
-        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel21.setText("DELL");
-        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 230, 70));
 
         timeLeft.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 tiempoJuegos(evt);
             }
         });
-        jPanel1.add(timeLeft, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 340, 110, -1));
+        jPanel1.add(timeLeft, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 220, 110, -1));
 
         dellBasePlates.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 capcomSistemasChange(evt);
             }
         });
-        jPanel1.add(dellBasePlates, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 100, 110, -1));
+        jPanel1.add(dellBasePlates, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 100, 110, -1));
 
         dellCPUs.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 dellCPUsChange(evt);
             }
         });
-        jPanel1.add(dellCPUs, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 130, 110, -1));
+        jPanel1.add(dellCPUs, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 130, 110, -1));
 
         dellRAMs.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 capcomNivelesChange(evt);
             }
         });
-        jPanel1.add(dellRAMs, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, 110, -1));
+        jPanel1.add(dellRAMs, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 160, 110, -1));
 
         dellPowerSupplies.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 capcomNarrativasChange(evt);
             }
         });
-        jPanel1.add(dellPowerSupplies, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 110, -1));
+        jPanel1.add(dellPowerSupplies, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 190, 110, -1));
 
         dellIntegrators.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 dellIntegratorsChange(evt);
             }
         });
-        jPanel1.add(dellIntegrators, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 250, 110, -1));
+        jPanel1.add(dellIntegrators, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, 110, -1));
 
         timeDuration.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 tiempoDias(evt);
             }
         });
-        jPanel1.add(timeDuration, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 230, 110, -1));
+        jPanel1.add(timeDuration, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 160, 110, -1));
 
         hpBasePlates.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 nintendoSistemasChange(evt);
             }
         });
-        jPanel1.add(hpBasePlates, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 330, 110, -1));
+        jPanel1.add(hpBasePlates, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, 110, -1));
 
         hpCPUs.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 hpCPUsChange(evt);
             }
         });
-        jPanel1.add(hpCPUs, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 360, 110, -1));
+        jPanel1.add(hpCPUs, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 360, 110, -1));
 
         hpRAMs.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 nintendoNivelesChange(evt);
             }
         });
-        jPanel1.add(hpRAMs, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 390, 110, -1));
+        jPanel1.add(hpRAMs, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 390, 110, -1));
 
         hpPowerSupplies.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 nintendoNarrativasChange(evt);
             }
         });
-        jPanel1.add(hpPowerSupplies, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 420, 110, -1));
+        jPanel1.add(hpPowerSupplies, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 420, 110, -1));
 
         hpGraphicsCards.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 hpGraphicsCardsChange(evt);
             }
         });
-        jPanel1.add(hpGraphicsCards, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 450, 110, -1));
+        jPanel1.add(hpGraphicsCards, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 450, 110, -1));
 
         BackButton.setBackground(new java.awt.Color(0, 0, 0));
         BackButton.setFont(new java.awt.Font("BM Yeonsung", 1, 18)); // NOI18N
@@ -280,9 +271,10 @@ public class Settings extends javax.swing.JFrame {
                 volver(evt);
             }
         });
-        jPanel1.add(BackButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 90, 40));
+        jPanel1.add(BackButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 130, 40));
 
-        jLabel12.setFont(new java.awt.Font("BM Yeonsung", 1, 18)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Tarjetas Gráficas");
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 220, -1, -1));
 
@@ -291,9 +283,15 @@ public class Settings extends javax.swing.JFrame {
                 dellGraphicsCardsChange(evt);
             }
         });
-        jPanel1.add(dellGraphicsCards, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 110, -1));
+        jPanel1.add(dellGraphicsCards, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 220, 110, -1));
 
-        jLabel14.setFont(new java.awt.Font("BM Yeonsung", 1, 18)); // NOI18N
+        jLabel20.setFont(new java.awt.Font("Algerian", 3, 36)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("CONFIGURACIÓN");
+        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, 490, 70));
+
+        jLabel14.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Integradores");
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 480, -1, -1));
 
@@ -302,13 +300,37 @@ public class Settings extends javax.swing.JFrame {
                 hpIntegratorsChange(evt);
             }
         });
-        jPanel1.add(hpIntegrators, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 480, 110, -1));
+        jPanel1.add(hpIntegrators, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 480, 110, -1));
+
+        jLabel18.setFont(new java.awt.Font("Algerian", 3, 36)); // NOI18N
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/dell.png"))); // NOI18N
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 60, 240, 240));
+
+        jLabel21.setFont(new java.awt.Font("Algerian", 3, 36)); // NOI18N
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo-negrito.jpg"))); // NOI18N
+        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, 310, 60));
+
+        jLabel22.setFont(new java.awt.Font("Algerian", 3, 36)); // NOI18N
+        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo-negrito.jpg"))); // NOI18N
+        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, 330, 210));
+
+        jLabel23.setFont(new java.awt.Font("Algerian", 3, 36)); // NOI18N
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo-negrito.jpg"))); // NOI18N
+        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, 330, 210));
+
+        jLabel24.setFont(new java.awt.Font("Algerian", 3, 36)); // NOI18N
+        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logo hp 2.png"))); // NOI18N
+        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 490, 240));
+
+        jLabel25.setFont(new java.awt.Font("Algerian", 3, 36)); // NOI18N
+        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo-negrito.jpg"))); // NOI18N
+        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 90, 330, 210));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 803, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 952, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -556,7 +578,6 @@ public class Settings extends javax.swing.JFrame {
     private javax.swing.JSpinner hpIntegrators;
     private javax.swing.JSpinner hpPowerSupplies;
     private javax.swing.JSpinner hpRAMs;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -567,15 +588,18 @@ public class Settings extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSpinner timeDuration;
     private javax.swing.JSpinner timeLeft;

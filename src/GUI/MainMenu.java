@@ -25,55 +25,26 @@ public class MainMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ConfigurationButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        HPButton = new javax.swing.JButton();
-        DELLButton = new javax.swing.JButton();
-        BothButton = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
+        BothButton = new javax.swing.JButton();
+        ConfigurationButton = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        DELLButton = new javax.swing.JButton();
+        HPButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setMaximumSize(new java.awt.Dimension(900, 600));
         setMinimumSize(new java.awt.Dimension(900, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        ConfigurationButton.setBackground(new java.awt.Color(0, 0, 0));
-        ConfigurationButton.setFont(new java.awt.Font("BM Yeonsung", 1, 24)); // NOI18N
-        ConfigurationButton.setForeground(new java.awt.Color(255, 255, 255));
-        ConfigurationButton.setText("CONFIGURACIÓN");
-        ConfigurationButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ConfigurationButtonActionPerformed(evt);
-            }
-        });
-        getContentPane().add(ConfigurationButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 490, 220, 70));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/VS_logo.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 70, 280, 290));
-
-        HPButton.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Blue"));
-        HPButton.setFont(new java.awt.Font("BM Yeonsung", 1, 36)); // NOI18N
-        HPButton.setText("HP");
-        HPButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HPButtonActionPerformed(evt);
-            }
-        });
-        getContentPane().add(HPButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 310, 180));
-
-        DELLButton.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Blue"));
-        DELLButton.setFont(new java.awt.Font("BM Yeonsung", 1, 36)); // NOI18N
-        DELLButton.setText("DELL");
-        DELLButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DELLButtonActionPerformed(evt);
-            }
-        });
-        getContentPane().add(DELLButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 120, 310, 180));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         BothButton.setBackground(new java.awt.Color(0, 0, 0));
-        BothButton.setFont(new java.awt.Font("BM Yeonsung", 1, 36)); // NOI18N
+        BothButton.setFont(new java.awt.Font("Algerian", 1, 36)); // NOI18N
         BothButton.setForeground(new java.awt.Color(255, 255, 255));
         BothButton.setText("DELL VS HP");
         BothButton.addActionListener(new java.awt.event.ActionListener() {
@@ -81,9 +52,57 @@ public class MainMenu extends javax.swing.JFrame {
                 BothButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(BothButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, 300, 170));
+        jPanel1.add(BothButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 450, 300, -1));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        ConfigurationButton.setBackground(new java.awt.Color(0, 0, 0));
+        ConfigurationButton.setFont(new java.awt.Font("Algerian", 1, 24)); // NOI18N
+        ConfigurationButton.setForeground(new java.awt.Color(255, 255, 255));
+        ConfigurationButton.setText("CONFIGURACIÓN");
+        ConfigurationButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ConfigurationButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ConfigurationButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 540, 370, 40));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/vs.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 550, 220));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/VS_logo.png"))); // NOI18N
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 300, 300));
+
+        DELLButton.setBackground(new java.awt.Color(0, 0, 0));
+        DELLButton.setFont(new java.awt.Font("Algerian", 1, 36)); // NOI18N
+        DELLButton.setForeground(new java.awt.Color(255, 255, 255));
+        DELLButton.setText("DELL");
+        DELLButton.setContentAreaFilled(false);
+        DELLButton.setFocusPainted(false);
+        DELLButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DELLButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(DELLButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 290, 190, -1));
+
+        HPButton.setBackground(new java.awt.Color(0, 0, 0));
+        HPButton.setFont(new java.awt.Font("Algerian", 1, 36)); // NOI18N
+        HPButton.setForeground(new java.awt.Color(255, 255, 255));
+        HPButton.setText("HP");
+        HPButton.setContentAreaFilled(false);
+        HPButton.setFocusPainted(false);
+        HPButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HPButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(HPButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 180, 60));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo-negrito.jpg"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, -60, 590, 500));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo-negrito.jpg"))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 590, 500));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 590));
 
         pack();
@@ -150,6 +169,9 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JButton DELLButton;
     private javax.swing.JButton HPButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
