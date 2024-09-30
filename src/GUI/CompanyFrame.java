@@ -166,11 +166,12 @@ public class CompanyFrame extends javax.swing.JFrame {
         NormalPCQuantity = new javax.swing.JLabel();
         NormalPCLabel = new javax.swing.JLabel();
         IntegratorQuantity = new javax.swing.JLabel();
-        bg6 = new javax.swing.JLabel();
         bg5 = new javax.swing.JLabel();
         bg7 = new javax.swing.JLabel();
         bg8 = new javax.swing.JLabel();
+        bg6 = new javax.swing.JLabel();
         bgLabel = new javax.swing.JLabel();
+        bg9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(900, 600));
@@ -206,7 +207,7 @@ public class CompanyFrame extends javax.swing.JFrame {
         textRAM.setForeground(new java.awt.Color(255, 255, 255));
         textRAM.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         textRAM.setText("0");
-        getContentPane().add(textRAM, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 60, 50));
+        getContentPane().add(textRAM, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 60, 50));
 
         textPowerSupply.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         textPowerSupply.setForeground(new java.awt.Color(255, 255, 255));
@@ -239,19 +240,19 @@ public class CompanyFrame extends javax.swing.JFrame {
         UtilityLabel.setFont(new java.awt.Font("Algerian", 1, 12)); // NOI18N
         UtilityLabel.setForeground(new java.awt.Color(255, 255, 255));
         UtilityLabel.setText("Utilidad:");
-        getContentPane().add(UtilityLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 90, 80, 30));
+        getContentPane().add(UtilityLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 130, 80, 30));
 
         EarningsLabel.setBackground(new java.awt.Color(255, 255, 255));
         EarningsLabel.setFont(new java.awt.Font("Algerian", 1, 12)); // NOI18N
         EarningsLabel.setForeground(new java.awt.Color(255, 255, 255));
         EarningsLabel.setText("Ganancias:");
-        getContentPane().add(EarningsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, 80, 30));
+        getContentPane().add(EarningsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 10, 80, 30));
 
         CostsLabel.setBackground(new java.awt.Color(255, 255, 255));
         CostsLabel.setFont(new java.awt.Font("Algerian", 1, 12)); // NOI18N
         CostsLabel.setForeground(new java.awt.Color(255, 255, 255));
         CostsLabel.setText("Costos:");
-        getContentPane().add(CostsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 50, 80, 30));
+        getContentPane().add(CostsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 100, 80, 30));
 
         WorkersRAMLabel.setBackground(new java.awt.Color(255, 255, 255));
         WorkersRAMLabel.setFont(new java.awt.Font("Algerian", 1, 12)); // NOI18N
@@ -420,14 +421,14 @@ public class CompanyFrame extends javax.swing.JFrame {
         CompanyUtilitys.setForeground(new java.awt.Color(255, 255, 255));
         CompanyUtilitys.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         CompanyUtilitys.setText("0");
-        getContentPane().add(CompanyUtilitys, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, 100, 30));
+        getContentPane().add(CompanyUtilitys, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 130, 100, 30));
 
         CompanyCosts.setBackground(new java.awt.Color(255, 255, 255));
         CompanyCosts.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         CompanyCosts.setForeground(new java.awt.Color(255, 255, 255));
         CompanyCosts.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         CompanyCosts.setText("0");
-        getContentPane().add(CompanyCosts, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 50, 100, 30));
+        getContentPane().add(CompanyCosts, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 100, 100, 30));
 
         CompanyEarnings.setBackground(new java.awt.Color(255, 255, 255));
         CompanyEarnings.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -501,7 +502,7 @@ public class CompanyFrame extends javax.swing.JFrame {
         PMStatusLabel.setFont(new java.awt.Font("Algerian", 1, 12)); // NOI18N
         PMStatusLabel.setForeground(new java.awt.Color(255, 255, 255));
         PMStatusLabel.setText("Status PM:");
-        getContentPane().add(PMStatusLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 170, 80, 30));
+        getContentPane().add(PMStatusLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 170, 80, 30));
 
         PMCostLabel.setBackground(new java.awt.Color(255, 255, 255));
         PMCostLabel.setFont(new java.awt.Font("Algerian", 1, 12)); // NOI18N
@@ -514,14 +515,14 @@ public class CompanyFrame extends javax.swing.JFrame {
         Faults.setForeground(new java.awt.Color(255, 255, 255));
         Faults.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         Faults.setText("0");
-        getContentPane().add(Faults, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 250, 100, 30));
+        getContentPane().add(Faults, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 250, 100, 30));
 
         PMCost.setBackground(new java.awt.Color(255, 255, 255));
         PMCost.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         PMCost.setForeground(new java.awt.Color(255, 255, 255));
         PMCost.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         PMCost.setText("0");
-        getContentPane().add(PMCost, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 210, 100, 30));
+        getContentPane().add(PMCost, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 210, 100, 30));
 
         PMStatus.setBackground(new java.awt.Color(255, 255, 255));
         PMStatus.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -582,13 +583,13 @@ public class CompanyFrame extends javax.swing.JFrame {
         WorkersAvailableLabel.setFont(new java.awt.Font("Algerian", 1, 12)); // NOI18N
         WorkersAvailableLabel.setForeground(new java.awt.Color(255, 255, 255));
         WorkersAvailableLabel.setText("Trabajadores disponibles:");
-        getContentPane().add(WorkersAvailableLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 310, 180, 30));
+        getContentPane().add(WorkersAvailableLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 310, 180, 30));
 
         WorkersAvailableQuantity.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         WorkersAvailableQuantity.setForeground(new java.awt.Color(255, 255, 255));
         WorkersAvailableQuantity.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         WorkersAvailableQuantity.setText("0");
-        getContentPane().add(WorkersAvailableQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 310, 60, 30));
+        getContentPane().add(WorkersAvailableQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 310, 90, 30));
 
         DaysLeftLabel.setBackground(new java.awt.Color(255, 255, 255));
         DaysLeftLabel.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
@@ -642,10 +643,6 @@ public class CompanyFrame extends javax.swing.JFrame {
         IntegratorQuantity.setText("0");
         getContentPane().add(IntegratorQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 250, 100, 30));
 
-        bg6.setBackground(new java.awt.Color(0, 0, 0));
-        bg6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo-negrito.jpg"))); // NOI18N
-        getContentPane().add(bg6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 470, 250));
-
         bg5.setBackground(new java.awt.Color(0, 0, 0));
         bg5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo-negrito.jpg"))); // NOI18N
         getContentPane().add(bg5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 190, 410, 730));
@@ -658,8 +655,16 @@ public class CompanyFrame extends javax.swing.JFrame {
         bg8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo-negrito.jpg"))); // NOI18N
         getContentPane().add(bg8, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, -160, 410, 730));
 
+        bg6.setBackground(new java.awt.Color(0, 0, 0));
+        bg6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo-negrito.jpg"))); // NOI18N
+        getContentPane().add(bg6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 0, 120, 40));
+
         bgLabel.setBackground(new java.awt.Color(255, 153, 0));
         getContentPane().add(bgLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 620));
+
+        bg9.setBackground(new java.awt.Color(0, 0, 0));
+        bg9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo-negrito.jpg"))); // NOI18N
+        getContentPane().add(bg9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 470, 250));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -889,6 +894,7 @@ public class CompanyFrame extends javax.swing.JFrame {
     private javax.swing.JLabel bg6;
     private javax.swing.JLabel bg7;
     private javax.swing.JLabel bg8;
+    private javax.swing.JLabel bg9;
     private javax.swing.JLabel bgLabel;
     private javax.swing.JLabel companyLogo;
     private javax.swing.JButton minusButton1;
