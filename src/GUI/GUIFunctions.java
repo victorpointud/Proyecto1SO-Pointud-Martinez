@@ -134,7 +134,7 @@ public class GUIFunctions {
         Company HP = null;
         Company DELL = null;
 
-        // Dependiendo del valor de companyId, cargamos los datos de HP, DELL o ambos
+// Dependiendo del valor de companyId, cargamos los datos de HP, DELL o ambos
         if (companyId == 0 || companyId > 1) {
             try {
                 entity = storeJSON.GetFile(CompanyNumber.HP);
@@ -167,7 +167,7 @@ public class GUIFunctions {
             } catch (IOException e) {
                 System.err.println("Error al cargar los datos de DELL: " + e.getMessage());
             }
-        }
+        } 
 
         // Dependiendo del valor de companyId mostramos un gráfico específico o el de ambas empresas
         if (companyId == 0 && HP != null) {

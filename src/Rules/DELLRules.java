@@ -19,7 +19,7 @@ public class DELLRules extends CompanyRules {
         this.income = 80000f;  
         this.incomeWithGraphicsCard = 120000f; 
         this.computersToGraphicsCard = 3;
-        this.employees = 25;
+        this.employees = 21; //Usamos el ultimo numero del carnet de Gabriel
         this.basePlatesProductionPerDay = 0.5f;
         this.CPUsProductionPerDay = 0.33f;
         this.RAMsProductionPerDay = 1f;

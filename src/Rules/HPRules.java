@@ -18,7 +18,7 @@ public class HPRules extends CompanyRules {
         this.income = 90000f; 
         this.incomeWithGraphicsCard = 140000f; 
         this.computersToGraphicsCard = 2;
-        this.employees = 23;
+        this.employees = 19;//tomamos numero de carnet = 7
         this.basePlatesProductionPerDay = 0.5f;
         this.CPUsProductionPerDay = 1f;
         this.RAMsProductionPerDay = 2f;

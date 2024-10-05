@@ -188,7 +188,7 @@ public class CompanyFrame extends javax.swing.JFrame {
         textGraphicCard.setForeground(new java.awt.Color(255, 255, 255));
         textGraphicCard.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         textGraphicCard.setText("0");
-        getContentPane().add(textGraphicCard, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 50, 50));
+        getContentPane().add(textGraphicCard, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 30, 50));
 
         textBasePlate.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         textBasePlate.setForeground(new java.awt.Color(255, 255, 255));
@@ -213,7 +213,7 @@ public class CompanyFrame extends javax.swing.JFrame {
         textPowerSupply.setForeground(new java.awt.Color(255, 255, 255));
         textPowerSupply.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         textPowerSupply.setText("0");
-        getContentPane().add(textPowerSupply, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 50, 50));
+        getContentPane().add(textPowerSupply, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 50, 50));
 
         BasePlatesProgressBar.setBackground(new java.awt.Color(255, 255, 255));
         BasePlatesProgressBar.setForeground(new java.awt.Color(255, 153, 0));
@@ -470,7 +470,7 @@ public class CompanyFrame extends javax.swing.JFrame {
         GraphicCardCost.setForeground(new java.awt.Color(255, 255, 255));
         GraphicCardCost.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         GraphicCardCost.setText("0");
-        getContentPane().add(GraphicCardCost, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 90, -1));
+        getContentPane().add(GraphicCardCost, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 230, 90, -1));
 
         BasePlateCost.setForeground(new java.awt.Color(255, 255, 255));
         BasePlateCost.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -660,7 +660,7 @@ public class CompanyFrame extends javax.swing.JFrame {
         getContentPane().add(bg6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 0, 120, 40));
 
         bgLabel.setBackground(new java.awt.Color(255, 153, 0));
-        getContentPane().add(bgLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 620));
+        getContentPane().add(bgLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -40, 900, 620));
 
         bg9.setBackground(new java.awt.Color(0, 0, 0));
         bg9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo-negrito.jpg"))); // NOI18N

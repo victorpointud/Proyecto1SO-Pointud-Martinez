@@ -15,7 +15,7 @@ public class Observer extends Thread {
         this.window = window;
         this.company = company;
     }
-
+    
     @Override
     public void run() {
         while (true) {
@@ -128,7 +128,7 @@ public class Observer extends Thread {
             if (company.getDrive().getComputersWithGraphicsCard() != Integer.parseInt(window.getGraphicPCQuantity().getText())) {
                 window.getGraphicPCQuantity().setText(String.valueOf(company.getDrive().getComputersWithGraphicsCard()));
             }
-        }
+        }       
     }
 
     public CompanyFrame getWindow() {

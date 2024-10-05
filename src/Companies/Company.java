@@ -62,6 +62,7 @@ public class Company {
         this.rules = rules;
     }
     
+    //funcion despedir empleado
     public void fireEmployee(int type) {
         if (amountOfEmployees > 0) {
             boolean eliminado = employees[type].removeLast();
@@ -74,6 +75,7 @@ public class Company {
         }
     }
     
+    //funcion contratar empleado
     public void hireEmployee(int type) {
         if (vacancy > 0) {
             WorkerFactory workerFactory = new WorkerFactory();
