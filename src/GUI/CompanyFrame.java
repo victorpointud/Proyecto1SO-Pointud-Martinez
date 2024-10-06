@@ -155,7 +155,6 @@ public class CompanyFrame extends javax.swing.JFrame {
         DirectorCostLabel = new javax.swing.JLabel();
         DirectorCosts = new javax.swing.JLabel();
         BackButton = new javax.swing.JButton();
-        ShowGraphsButton = new javax.swing.JButton();
         WorkersAvailableLabel = new javax.swing.JLabel();
         WorkersAvailableQuantity = new javax.swing.JLabel();
         DaysLeftLabel = new javax.swing.JLabel();
@@ -568,17 +567,6 @@ public class CompanyFrame extends javax.swing.JFrame {
         });
         getContentPane().add(BackButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 90, 40));
 
-        ShowGraphsButton.setBackground(new java.awt.Color(0, 0, 0));
-        ShowGraphsButton.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        ShowGraphsButton.setForeground(new java.awt.Color(255, 255, 255));
-        ShowGraphsButton.setText("Ver Gráfico");
-        ShowGraphsButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ShowGraphsButtonActionPerformed(evt);
-            }
-        });
-        getContentPane().add(ShowGraphsButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 540, 140, 40));
-
         WorkersAvailableLabel.setBackground(new java.awt.Color(255, 255, 255));
         WorkersAvailableLabel.setFont(new java.awt.Font("Algerian", 1, 12)); // NOI18N
         WorkersAvailableLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -813,12 +801,6 @@ public class CompanyFrame extends javax.swing.JFrame {
 
     }//GEN-LAST:event_closeWindow
 
-    private void ShowGraphsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowGraphsButtonActionPerformed
-       GUIFunctions.openChartWindow(0);
-       GUIFunctions.openChartWindow(1);
-       GUIFunctions.openChartWindow(2);
-    }//GEN-LAST:event_ShowGraphsButtonActionPerformed
-
 
     private FileEntity getFile(){
         FileEntity file = new FileEntity();
@@ -875,7 +857,6 @@ public class CompanyFrame extends javax.swing.JFrame {
     private javax.swing.JLabel RAMCost;
     private javax.swing.JLabel RAMLabel;
     private javax.swing.JProgressBar RAMProgressBar;
-    private javax.swing.JButton ShowGraphsButton;
     private javax.swing.JLabel UtilityLabel;
     private javax.swing.JLabel WBPQuantity;
     private javax.swing.JLabel WCPUQuantity;

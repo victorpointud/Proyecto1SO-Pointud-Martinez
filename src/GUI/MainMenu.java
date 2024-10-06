@@ -127,6 +127,7 @@ public class MainMenu extends javax.swing.JFrame {
     private void HPButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HPButtonActionPerformed
         GUIFunctions.openSim(0);
         Global.mainMenu.setVisible(false);
+        
     }//GEN-LAST:event_HPButtonActionPerformed
 
     public static void main(String args[]) {

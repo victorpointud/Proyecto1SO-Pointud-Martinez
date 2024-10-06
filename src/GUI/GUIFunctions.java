@@ -42,7 +42,7 @@ public class GUIFunctions {
             CompanyFrame companyFrame = new CompanyFrame(HP);
             Observer render = new Observer(companyFrame, HP);
             render.start();
-//            Chart hpChart = new Chart(HP, 1, null);
+            Chart hpChart = new Chart(HP, 1, null);
             companyFrame.setVisible(true);
 
         } 
@@ -70,7 +70,7 @@ public class GUIFunctions {
             CompanyFrame companyFrame = new CompanyFrame(DELL);
             Observer render = new Observer(companyFrame, DELL);
             render.start();
-//            Chart chart = new Chart(DELL, 2, null);
+            Chart chart = new Chart(DELL, 2, null);
             companyFrame.setVisible(true);
 
         } 
@@ -118,7 +118,7 @@ public class GUIFunctions {
             CompanyFrame company2Frame = new CompanyFrame(DELL);
             Observer render2 = new Observer(company2Frame, DELL);
             render2.start();
-//            Chart dellVsHPChart = new Chart(HP, 3, DELL);
+            Chart dellVsHPChart = new Chart(HP, 3, DELL);
             company2Frame.setVisible(true);
         }
     }
