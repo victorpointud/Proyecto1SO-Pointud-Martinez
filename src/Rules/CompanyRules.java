@@ -34,14 +34,25 @@ public class CompanyRules {
 
     protected CompanyNumber companyNumber;
 
+    /**
+     * Checks if it is possible to assemble a computer with the available resources.
+     * @return true if a computer can be assembled, false otherwise.
+     */
     public boolean canAssembleComputer(int basePlates, int CPUs, int RAMs, int powerSupplies) {
         return (basePlates >= this.basePlatesNeedIt && CPUs >= this.CPUsNeedIt && RAMs >= this.RAMsNeedIt && powerSupplies >= this.powerSuppliesNeedIt);
     }
-
+    
+    /**
+     * Checks if it is possible to assemble a computer with a graphics card.
+     * @return true if a computer with a graphics card can be assembled, false otherwise.
+     */
     public boolean canAssembleComputerWithGraphicsCard(int basePlates, int CPUs, int RAMs, int powerSupplies, int graphicsCards) {
         return (basePlates >= this.basePlatesNeedIt && CPUs >= this.CPUsNeedIt && RAMs >= this.RAMsNeedIt && powerSupplies >= this.powerSuppliesNeedIt && graphicsCards >= this.graphicsCardsNeedIt);
     }
 
+    /**
+     * Getters & Setters.
+     */
     public float getIncome() {
         return income;
     }

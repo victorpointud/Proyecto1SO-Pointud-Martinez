@@ -9,6 +9,9 @@ import Number.CompanyNumber;
 
 public class HPRules extends CompanyRules {
 
+    /**
+    * Constructs an HPRules object with predefined values specific to the HP company.
+    */
     public HPRules() {
         this.basePlatesNeedIt = 1;
         this.CPUsNeedIt = 1;
@@ -18,7 +21,7 @@ public class HPRules extends CompanyRules {
         this.income = 90000f; 
         this.incomeWithGraphicsCard = 140000f; 
         this.computersToGraphicsCard = 2;
-        this.employees = 19;//tomamos numero de carnet = 7
+        this.employees = 19;
         this.basePlatesProductionPerDay = 0.5f;
         this.CPUsProductionPerDay = 1f;
         this.RAMsProductionPerDay = 2f;

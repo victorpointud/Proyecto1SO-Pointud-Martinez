@@ -7,9 +7,7 @@ import Store.JSONStore;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.ImageIcon;
 import main.Global;
-import Number.CompanyNumber;
 
 /*
 * made by: victorpointud
@@ -37,24 +35,24 @@ public class CompanyFrame extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         this.company = company;
-        company.updateTimes();
+        company.updateEmployeeTimings();
         BasePlatesProgressBar.setMinimum(0);
-        BasePlatesProgressBar.setMaximum(company.getDrive().getMaxBasePlates());
+        BasePlatesProgressBar.setMaximum(company.getCompanyDrive().getMaxBasePlates());
         CPUProgressBar.setMinimum(0);
-        CPUProgressBar.setMaximum(company.getDrive().getMaxCPUs());
+        CPUProgressBar.setMaximum(company.getCompanyDrive().getMaxCPUs());
         GraphicCardProgressBar.setMinimum(0);
-        GraphicCardProgressBar.setMaximum(company.getDrive().getMaxGraphicsCards());
+        GraphicCardProgressBar.setMaximum(company.getCompanyDrive().getMaxGraphicsCards());
         RAMProgressBar.setMinimum(0);
-        RAMProgressBar.setMaximum(company.getDrive().getMaxRAMs());
+        RAMProgressBar.setMaximum(company.getCompanyDrive().getMaxRAMs());
         PowerSupplyProgressBar.setMinimum(0);
-        PowerSupplyProgressBar.setMaximum(company.getDrive().getMaxPowerSupplies());
-        WBPQuantity.setText(String.valueOf(company.getEmployees()[0].getSize()));
-        WCPUQuantity.setText(String.valueOf(company.getEmployees()[1].getSize()));
-        WRAMQuantity.setText(String.valueOf(company.getEmployees()[2].getSize()));
-        WFEQuantity.setText(String.valueOf(company.getEmployees()[3].getSize()));
-        WTGQuantity.setText(String.valueOf(company.getEmployees()[4].getSize()));
-        IntegratorsQuantity.setText(String.valueOf(company.getEmployees()[5].getSize()));
-        WorkersAvailableQuantity.setText(String.valueOf(company.getAmountOfEmployees()));
+        PowerSupplyProgressBar.setMaximum(company.getCompanyDrive().getMaxPowerSupplies());
+        WBPQuantity.setText(String.valueOf(company.getWorkforce()[0].getSize()));
+        WCPUQuantity.setText(String.valueOf(company.getWorkforce()[1].getSize()));
+        WRAMQuantity.setText(String.valueOf(company.getWorkforce()[2].getSize()));
+        WFEQuantity.setText(String.valueOf(company.getWorkforce()[3].getSize()));
+        WTGQuantity.setText(String.valueOf(company.getWorkforce()[4].getSize()));
+        IntegratorsQuantity.setText(String.valueOf(company.getWorkforce()[5].getSize()));
+        WorkersAvailableQuantity.setText(String.valueOf(company.getTotalEmployees()));
         
 
     }
@@ -63,22 +61,22 @@ public class CompanyFrame extends javax.swing.JFrame {
         initComponents();
         this.company = company;
         BasePlatesProgressBar.setMinimum(0);
-        BasePlatesProgressBar.setMaximum(company.getDrive().getMaxBasePlates());
+        BasePlatesProgressBar.setMaximum(company.getCompanyDrive().getMaxBasePlates());
         CPUProgressBar.setMinimum(0);
-        CPUProgressBar.setMaximum(company.getDrive().getMaxCPUs());
+        CPUProgressBar.setMaximum(company.getCompanyDrive().getMaxCPUs());
         GraphicCardProgressBar.setMinimum(0);
-        GraphicCardProgressBar.setMaximum(company.getDrive().getMaxGraphicsCards());
+        GraphicCardProgressBar.setMaximum(company.getCompanyDrive().getMaxGraphicsCards());
         RAMProgressBar.setMinimum(0);
-        RAMProgressBar.setMaximum(company.getDrive().getMaxRAMs());
+        RAMProgressBar.setMaximum(company.getCompanyDrive().getMaxRAMs());
         PowerSupplyProgressBar.setMinimum(0);
-        PowerSupplyProgressBar.setMaximum(company.getDrive().getMaxPowerSupplies());
-        WBPQuantity.setText(String.valueOf(company.getEmployees()[0].getSize()));
-        WCPUQuantity.setText(String.valueOf(company.getEmployees()[1].getSize()));
-        WRAMQuantity.setText(String.valueOf(company.getEmployees()[2].getSize()));
-        WFEQuantity.setText(String.valueOf(company.getEmployees()[3].getSize()));
-        WTGQuantity.setText(String.valueOf(company.getEmployees()[4].getSize()));
-        IntegratorsQuantity.setText(String.valueOf(company.getEmployees()[5].getSize()));
-        WorkersAvailableQuantity.setText(String.valueOf(company.getAmountOfEmployees()));
+        PowerSupplyProgressBar.setMaximum(company.getCompanyDrive().getMaxPowerSupplies());
+        WBPQuantity.setText(String.valueOf(company.getWorkforce()[0].getSize()));
+        WCPUQuantity.setText(String.valueOf(company.getWorkforce()[1].getSize()));
+        WRAMQuantity.setText(String.valueOf(company.getWorkforce()[2].getSize()));
+        WFEQuantity.setText(String.valueOf(company.getWorkforce()[3].getSize()));
+        WTGQuantity.setText(String.valueOf(company.getWorkforce()[4].getSize()));
+        IntegratorsQuantity.setText(String.valueOf(company.getWorkforce()[5].getSize()));
+        WorkersAvailableQuantity.setText(String.valueOf(company.getTotalEmployees()));
         
 
     }
@@ -659,10 +657,10 @@ public class CompanyFrame extends javax.swing.JFrame {
 
     private void minusButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusButton1ActionPerformed
         company.fireEmployee(0);
-        WBPQuantity.setText(String.valueOf(company.getEmployees()[0].getSize()));
-        WorkersAvailableQuantity.setText(String.valueOf(company.getAmountOfEmployees()));
+        WBPQuantity.setText(String.valueOf(company.getWorkforce()[0].getSize()));
+        WorkersAvailableQuantity.setText(String.valueOf(company.getTotalEmployees()));
         try {
-            storeJSON.setFile(getFile(), company.getRules().getCompanyNumber());
+            storeJSON.setFile(getFile(), company.getCompanyRules().getCompanyNumber());
         } catch (IOException ex) {
             Logger.getLogger(CompanyFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -670,10 +668,10 @@ public class CompanyFrame extends javax.swing.JFrame {
 
     private void plusButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plusButton1ActionPerformed
         company.hireEmployee(0);
-        WBPQuantity.setText(String.valueOf(company.getEmployees()[0].getSize()));
-        WorkersAvailableQuantity.setText(String.valueOf(company.getAmountOfEmployees()));
+        WBPQuantity.setText(String.valueOf(company.getWorkforce()[0].getSize()));
+        WorkersAvailableQuantity.setText(String.valueOf(company.getTotalEmployees()));
         try {
-            storeJSON.setFile(getFile(), company.getRules().getCompanyNumber());
+            storeJSON.setFile(getFile(), company.getCompanyRules().getCompanyNumber());
         } catch (IOException ex) {
             Logger.getLogger(CompanyFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -681,10 +679,10 @@ public class CompanyFrame extends javax.swing.JFrame {
 
     private void plusButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plusButton2ActionPerformed
         company.hireEmployee(1);
-        WCPUQuantity.setText(String.valueOf(company.getEmployees()[1].getSize()));
-        WorkersAvailableQuantity.setText(String.valueOf(company.getAmountOfEmployees()));
+        WCPUQuantity.setText(String.valueOf(company.getWorkforce()[1].getSize()));
+        WorkersAvailableQuantity.setText(String.valueOf(company.getTotalEmployees()));
         try {
-            storeJSON.setFile(getFile(), company.getRules().getCompanyNumber());
+            storeJSON.setFile(getFile(), company.getCompanyRules().getCompanyNumber());
         } catch (IOException ex) {
             Logger.getLogger(CompanyFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -692,10 +690,10 @@ public class CompanyFrame extends javax.swing.JFrame {
 
     private void minusButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusButton2ActionPerformed
         company.fireEmployee(1);
-        WCPUQuantity.setText(String.valueOf(company.getEmployees()[1].getSize()));
-        WorkersAvailableQuantity.setText(String.valueOf(company.getAmountOfEmployees()));
+        WCPUQuantity.setText(String.valueOf(company.getWorkforce()[1].getSize()));
+        WorkersAvailableQuantity.setText(String.valueOf(company.getTotalEmployees()));
         try {
-            storeJSON.setFile(getFile(), company.getRules().getCompanyNumber());
+            storeJSON.setFile(getFile(), company.getCompanyRules().getCompanyNumber());
         } catch (IOException ex) {
             Logger.getLogger(CompanyFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -703,10 +701,10 @@ public class CompanyFrame extends javax.swing.JFrame {
 
     private void plusButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plusButton3ActionPerformed
         company.hireEmployee(2);
-        WRAMQuantity.setText(String.valueOf(company.getEmployees()[2].getSize()));
-        WorkersAvailableQuantity.setText(String.valueOf(company.getAmountOfEmployees()));
+        WRAMQuantity.setText(String.valueOf(company.getWorkforce()[2].getSize()));
+        WorkersAvailableQuantity.setText(String.valueOf(company.getTotalEmployees()));
         try {
-            storeJSON.setFile(getFile(), company.getRules().getCompanyNumber());
+            storeJSON.setFile(getFile(), company.getCompanyRules().getCompanyNumber());
         } catch (IOException ex) {
             Logger.getLogger(CompanyFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -714,10 +712,10 @@ public class CompanyFrame extends javax.swing.JFrame {
 
     private void minusButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusButton3ActionPerformed
         company.fireEmployee(2);
-        WRAMQuantity.setText(String.valueOf(company.getEmployees()[2].getSize()));
-        WorkersAvailableQuantity.setText(String.valueOf(company.getAmountOfEmployees()));
+        WRAMQuantity.setText(String.valueOf(company.getWorkforce()[2].getSize()));
+        WorkersAvailableQuantity.setText(String.valueOf(company.getTotalEmployees()));
         try {
-            storeJSON.setFile(getFile(), company.getRules().getCompanyNumber());
+            storeJSON.setFile(getFile(), company.getCompanyRules().getCompanyNumber());
         } catch (IOException ex) {
             Logger.getLogger(CompanyFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -725,10 +723,10 @@ public class CompanyFrame extends javax.swing.JFrame {
 
     private void plusButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plusButton4ActionPerformed
         company.hireEmployee(3);
-        WFEQuantity.setText(String.valueOf(company.getEmployees()[3].getSize()));
-        WorkersAvailableQuantity.setText(String.valueOf(company.getAmountOfEmployees()));
+        WFEQuantity.setText(String.valueOf(company.getWorkforce()[3].getSize()));
+        WorkersAvailableQuantity.setText(String.valueOf(company.getTotalEmployees()));
         try {
-            storeJSON.setFile(getFile(), company.getRules().getCompanyNumber());
+            storeJSON.setFile(getFile(), company.getCompanyRules().getCompanyNumber());
         } catch (IOException ex) {
             Logger.getLogger(CompanyFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -736,10 +734,10 @@ public class CompanyFrame extends javax.swing.JFrame {
 
     private void minusButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusButton4ActionPerformed
         company.fireEmployee(3);
-        WFEQuantity.setText(String.valueOf(company.getEmployees()[3].getSize()));
-        WorkersAvailableQuantity.setText(String.valueOf(company.getAmountOfEmployees()));
+        WFEQuantity.setText(String.valueOf(company.getWorkforce()[3].getSize()));
+        WorkersAvailableQuantity.setText(String.valueOf(company.getTotalEmployees()));
         try {
-            storeJSON.setFile(getFile(), company.getRules().getCompanyNumber());
+            storeJSON.setFile(getFile(), company.getCompanyRules().getCompanyNumber());
         } catch (IOException ex) {
             Logger.getLogger(CompanyFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -747,10 +745,10 @@ public class CompanyFrame extends javax.swing.JFrame {
 
     private void plusButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plusButton5ActionPerformed
         company.hireEmployee(4);
-        WTGQuantity.setText(String.valueOf(company.getEmployees()[4].getSize()));
-        WorkersAvailableQuantity.setText(String.valueOf(company.getAmountOfEmployees()));
+        WTGQuantity.setText(String.valueOf(company.getWorkforce()[4].getSize()));
+        WorkersAvailableQuantity.setText(String.valueOf(company.getTotalEmployees()));
         try {
-            storeJSON.setFile(getFile(), company.getRules().getCompanyNumber());
+            storeJSON.setFile(getFile(), company.getCompanyRules().getCompanyNumber());
         } catch (IOException ex) {
             Logger.getLogger(CompanyFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -758,10 +756,10 @@ public class CompanyFrame extends javax.swing.JFrame {
 
     private void minusButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusButton5ActionPerformed
         company.fireEmployee(4);
-        WTGQuantity.setText(String.valueOf(company.getEmployees()[4].getSize()));
-        WorkersAvailableQuantity.setText(String.valueOf(company.getAmountOfEmployees()));
+        WTGQuantity.setText(String.valueOf(company.getWorkforce()[4].getSize()));
+        WorkersAvailableQuantity.setText(String.valueOf(company.getTotalEmployees()));
         try {
-            storeJSON.setFile(getFile(), company.getRules().getCompanyNumber());
+            storeJSON.setFile(getFile(), company.getCompanyRules().getCompanyNumber());
         } catch (IOException ex) {
             Logger.getLogger(CompanyFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -769,10 +767,10 @@ public class CompanyFrame extends javax.swing.JFrame {
 
     private void plusButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plusButton6ActionPerformed
         company.hireEmployee(5);
-        IntegratorsQuantity.setText(String.valueOf(company.getEmployees()[5].getSize()));
-        WorkersAvailableQuantity.setText(String.valueOf(company.getAmountOfEmployees()));
+        IntegratorsQuantity.setText(String.valueOf(company.getWorkforce()[5].getSize()));
+        WorkersAvailableQuantity.setText(String.valueOf(company.getTotalEmployees()));
         try {
-            storeJSON.setFile(getFile(), company.getRules().getCompanyNumber());
+            storeJSON.setFile(getFile(), company.getCompanyRules().getCompanyNumber());
         } catch (IOException ex) {
             Logger.getLogger(CompanyFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -780,17 +778,17 @@ public class CompanyFrame extends javax.swing.JFrame {
 
     private void minusButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusButton6ActionPerformed
         company.fireEmployee(5);
-        IntegratorsQuantity.setText(String.valueOf(company.getEmployees()[5].getSize()));
-        WorkersAvailableQuantity.setText(String.valueOf(company.getAmountOfEmployees()));
+        IntegratorsQuantity.setText(String.valueOf(company.getWorkforce()[5].getSize()));
+        WorkersAvailableQuantity.setText(String.valueOf(company.getTotalEmployees()));
         try {
-            storeJSON.setFile(getFile(), company.getRules().getCompanyNumber());
+            storeJSON.setFile(getFile(), company.getCompanyRules().getCompanyNumber());
         } catch (IOException ex) {
             Logger.getLogger(CompanyFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_minusButton6ActionPerformed
 
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
-        this.company.bankrupcy();
+        this.company.initiateBankruptcy();
         this.company = null;
         this.setVisible(false);
         Global.mainMenu.setVisible(true);
@@ -804,12 +802,12 @@ public class CompanyFrame extends javax.swing.JFrame {
 
     private FileEntity getFile(){
         FileEntity file = new FileEntity();
-        file.setGraphicsCards(company.getEmployees()[4].getSize());
-        file.setPowerSupplies(company.getEmployees()[1].getSize());
-        file.setRAMs(company.getEmployees()[0].getSize());
-        file.setBasePlates(company.getEmployees()[3].getSize());
-        file.setCPUs(company.getEmployees()[2].getSize());
-        file.setIntegrators(company.getEmployees()[5].getSize());
+        file.setGraphicsCards(company.getWorkforce()[4].getSize());
+        file.setPowerSupplies(company.getWorkforce()[1].getSize());
+        file.setRAMs(company.getWorkforce()[0].getSize());
+        file.setBasePlates(company.getWorkforce()[3].getSize());
+        file.setCPUs(company.getWorkforce()[2].getSize());
+        file.setIntegrators(company.getWorkforce()[5].getSize());
         file.setDeadLineDays(Global.daysBetweenReleases);
         file.setDurationDay((int)Global.daysDuration);
         return file;

@@ -16,157 +16,152 @@ import main.Global;
 
 public class Company {
 
-    private CompanyRules rules;
-    private Drive drive;
-    private List[] employees = new List[8];
-    private int amountOfEmployees;
-    private int vacancy;
+    private CompanyRules companyRules;
+    private Drive companyDrive;
+    private List[] workforce = new List[8];
+    private int totalEmployees;
+    private int availableVacancies;
 
+    /**
+     * Constructs a Company with specified initial workers and parameters.
+     */
     public Company(int numberOfBasePlateProducers, int numberOfCPUProducers, int numberOfRAMProducers, int numberOfPowerSupplyProducers, int numberOfGraphicsCardProducers, int numberOfIntegrators, Drive drive, CompanyRules rules) {
         WorkerFactory workerFactory = new WorkerFactory();
-        
-        for (int i = 0; i < employees.length; i++) {
-            employees[i] = new List();
+
+        for (int i = 0; i < workforce.length; i++) {
+            workforce[i] = new List();
         }
-        for (int i = 0; i < numberOfBasePlateProducers; i++) {
-            Worker basePlateWorker = workerFactory.makeWorker(WorkerTypeNumber.BasePlateProducer, drive, drive.getProducerMutex(), rules);
-            employees[0].addToList(basePlateWorker);
-        }
-        for (int i = 0; i < numberOfCPUProducers; i++) {
-            Worker cpuWorker = workerFactory.makeWorker(WorkerTypeNumber.CPUProducer, drive, drive.getProducerMutex(), rules);
-            employees[1].addToList(cpuWorker);
-        }
-        for (int i = 0; i < numberOfRAMProducers; i++) {
-            Worker ramWorker = workerFactory.makeWorker(WorkerTypeNumber.RAMProducer, drive, drive.getProducerMutex(), rules);
-            employees[2].addToList(ramWorker);
-        }
-        for (int i = 0; i < numberOfPowerSupplyProducers; i++) {
-            Worker powerSupplyWorker = workerFactory.makeWorker(WorkerTypeNumber.PowerSupplyProducer, drive, drive.getProducerMutex(), rules);
-            employees[3].addToList(powerSupplyWorker);
-        }
-        for (int i = 0; i < numberOfGraphicsCardProducers; i++) {
-            Worker graphicsCardWorker = workerFactory.makeWorker(WorkerTypeNumber.GraphicsCardProducer, drive, drive.getProducerMutex(), rules);
-            employees[4].addToList(graphicsCardWorker);
-        }
-        for (int i = 0; i < numberOfIntegrators; i++) {
-            Worker integratorWorker = workerFactory.makeWorker(WorkerTypeNumber.Integrator, drive, drive.getProducerMutex(), rules);
-            employees[5].addToList(integratorWorker);
-        }
-        Worker PM = workerFactory.makeWorker(WorkerTypeNumber.Manager, drive, drive.getProducerMutex(), rules);
-        employees[6].addToList(PM);
-        Worker director = workerFactory.makeWorker(WorkerTypeNumber.Director, drive, drive.getProducerMutex(), rules);
-        employees[7].addToList(director);
-        this.amountOfEmployees = numberOfBasePlateProducers + numberOfCPUProducers + numberOfRAMProducers + numberOfPowerSupplyProducers + numberOfGraphicsCardProducers + numberOfIntegrators;
-        this.vacancy = rules.getEmployees() - amountOfEmployees;
-        this.drive = drive;
-        this.rules = rules;
+        hireWorkers(numberOfBasePlateProducers, WorkerTypeNumber.BasePlateProducer, 0, workerFactory, drive, rules);
+        hireWorkers(numberOfCPUProducers, WorkerTypeNumber.CPUProducer, 1, workerFactory, drive, rules);
+        hireWorkers(numberOfRAMProducers, WorkerTypeNumber.RAMProducer, 2, workerFactory, drive, rules);
+        hireWorkers(numberOfPowerSupplyProducers, WorkerTypeNumber.PowerSupplyProducer, 3, workerFactory, drive, rules);
+        hireWorkers(numberOfGraphicsCardProducers, WorkerTypeNumber.GraphicsCardProducer, 4, workerFactory, drive, rules);
+        hireWorkers(numberOfIntegrators, WorkerTypeNumber.Integrator, 5, workerFactory, drive, rules);
+        Worker projectManager = workerFactory.makeWorker(WorkerTypeNumber.Manager, drive, drive.getProducerMutex(), rules);
+        workforce[6].addToList(projectManager);
+        Worker companyDirector = workerFactory.makeWorker(WorkerTypeNumber.Director, drive, drive.getProducerMutex(), rules);
+        workforce[7].addToList(companyDirector);
+        this.totalEmployees = numberOfBasePlateProducers + numberOfCPUProducers + numberOfRAMProducers + numberOfPowerSupplyProducers + numberOfGraphicsCardProducers + numberOfIntegrators;
+        this.availableVacancies = rules.getEmployees()- totalEmployees;
+        this.companyDrive = drive;
+        this.companyRules = rules;
     }
-    
-    //funcion despedir empleado
+
+    /**
+     * Fires an employee of the specified type.
+     */
     public void fireEmployee(int type) {
-        if (amountOfEmployees > 0) {
-            boolean eliminado = employees[type].removeLast();
-            if (eliminado) {
-                amountOfEmployees--;
-                vacancy++;
+        if (totalEmployees > 0) {
+            boolean removed = workforce[type].removeLast();
+            if (removed) {
+                totalEmployees--;
+                availableVacancies++;
             }
         } else {
             JOptionPane.showMessageDialog(null, "No hay más empleados por despedir");
         }
     }
-    
-    //funcion contratar empleado
+
+    /**
+     * Hires a new worker of the specified type.
+     */
     public void hireEmployee(int type) {
-        if (vacancy > 0) {
+        if (availableVacancies > 0) {
             WorkerFactory workerFactory = new WorkerFactory();
             Worker newWorker = null;
             switch (type) {
-                case 0:
-                    newWorker = workerFactory.makeWorker(WorkerTypeNumber.BasePlateProducer, drive, drive.getProducerMutex(), rules);
-                    break;
-                case 1:
-                    newWorker = workerFactory.makeWorker(WorkerTypeNumber.CPUProducer, drive, drive.getProducerMutex(), rules);
-                    break;
-                case 2:
-                    newWorker = workerFactory.makeWorker(WorkerTypeNumber.RAMProducer, drive, drive.getProducerMutex(), rules);
-                    break;
-                case 3:
-                    newWorker = workerFactory.makeWorker(WorkerTypeNumber.PowerSupplyProducer, drive, drive.getProducerMutex(), rules);
-                    break;
-                case 4:
-                    newWorker = workerFactory.makeWorker(WorkerTypeNumber.GraphicsCardProducer, drive, drive.getProducerMutex(), rules);
-                    break;
-                case 5:
-                    newWorker = workerFactory.makeWorker(WorkerTypeNumber.Integrator, drive, drive.getProducerMutex(), rules);
-                    break;
+                case 0 -> newWorker = workerFactory.makeWorker(WorkerTypeNumber.BasePlateProducer, companyDrive, companyDrive.getProducerMutex(), companyRules);
+                case 1 -> newWorker = workerFactory.makeWorker(WorkerTypeNumber.CPUProducer, companyDrive, companyDrive.getProducerMutex(), companyRules);
+                case 2 -> newWorker = workerFactory.makeWorker(WorkerTypeNumber.RAMProducer, companyDrive, companyDrive.getProducerMutex(), companyRules);
+                case 3 -> newWorker = workerFactory.makeWorker(WorkerTypeNumber.PowerSupplyProducer, companyDrive, companyDrive.getProducerMutex(), companyRules);
+                case 4 -> newWorker = workerFactory.makeWorker(WorkerTypeNumber.GraphicsCardProducer, companyDrive, companyDrive.getProducerMutex(), companyRules);
+                case 5 -> newWorker = workerFactory.makeWorker(WorkerTypeNumber.Integrator, companyDrive, companyDrive.getProducerMutex(), companyRules);
             }
-            employees[type].addToList(newWorker);
-            vacancy--;
-            amountOfEmployees++;
+            if (newWorker != null) {
+                workforce[type].addToList(newWorker);
+                availableVacancies--;
+                totalEmployees++;
+            }
         } else {
             JOptionPane.showMessageDialog(null, "No hay presupuesto para más personal.");
         }
     }
-    
-    public void bankrupcy(){
-        for (List employee : employees) {
-            int size = employee.getSize();
+
+    /**
+     * Handles the company's bankruptcy by firing all employees.
+     */
+    public void initiateBankruptcy() {
+        for (List employeeList : workforce) {
+            int size = employeeList.getSize();
             for (int j = 0; j < size; j++) {
-                System.out.println(employee.getSize());
-                employee.removeLast();
+                employeeList.removeLast();
                 System.out.println("Empleado despedido número: " + j);
             }
         }
     }
-    
-    public void updateTimes(){
-        for (int i = 0; i < employees.length; i++) {
-            for (int j = 0; j < employees[i].getSize(); j++) {
-                Node temp = employees[i].getNode(j);
-                if(temp != null)
-                    employees[i].getNode(j).getData().setDayDuration((int) Global.daysDuration);
+
+    /**
+     * Updates the day duration for all employees.
+     */
+    public void updateEmployeeTimings() {
+        for (List employeeList : workforce) {
+            for (int j = 0; j < employeeList.getSize(); j++) {
+                Node tempNode = employeeList.getNode(j);
+                if (tempNode != null) {
+                    tempNode.getData().setDayDuration((int) Global.daysDuration);
+                }
             }
         }
     }
 
-    public CompanyRules getRules() {
-        return rules;
+    private void hireWorkers(int count, WorkerTypeNumber type, int index, WorkerFactory workerFactory, Drive drive, CompanyRules rules) {
+        for (int i = 0; i < count; i++) {
+            Worker worker = workerFactory.makeWorker(type, drive, drive.getProducerMutex(), rules);
+            workforce[index].addToList(worker);
+        }
     }
 
-    public void setRules(CompanyRules rules) {
-        this.rules = rules;
+    /**
+     * Getters & Setters.
+     */
+
+    public CompanyRules getCompanyRules() {
+        return companyRules;
     }
 
-    public Drive getDrive() {
-        return drive;
+    public void setCompanyRules(CompanyRules companyRules) {
+        this.companyRules = companyRules;
     }
 
-    public void setDrive(Drive drive) {
-        this.drive = drive;
+    public Drive getCompanyDrive() {
+        return companyDrive;
     }
 
-    public List[] getEmployees() {
-        return employees;
+    public void setCompanyDrive(Drive companyDrive) {
+        this.companyDrive = companyDrive;
     }
 
-    public void setEmployees(List[] employees) {
-        this.employees = employees;
+    public List[] getWorkforce() {
+        return workforce;
     }
 
-    public int getAmountOfEmployees() {
-        return amountOfEmployees;
+    public void setWorkforce(List[] workforce) {
+        this.workforce = workforce;
     }
 
-    public void setAmountOfEmployees(int amountOfEmployees) {
-        this.amountOfEmployees = amountOfEmployees;
+    public int getTotalEmployees() {
+        return totalEmployees;
     }
 
-    public int getVacancy() {
-        return vacancy;
+    public void setTotalEmployees(int totalEmployees) {
+        this.totalEmployees = totalEmployees;
     }
 
-    public void setVacancy(int vacancy) {
-        this.vacancy = vacancy;
+    public int getAvailableVacancies() {
+        return availableVacancies;
     }
 
+    public void setAvailableVacancies(int availableVacancies) {
+        this.availableVacancies = availableVacancies;
+    }
 }

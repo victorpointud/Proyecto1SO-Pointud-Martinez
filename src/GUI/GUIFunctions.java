@@ -16,6 +16,9 @@ import main.Global;
 
 public class GUIFunctions {
 
+    /**
+     * Opens the simulation for the specified company or for both companies.
+     */
     public static void openSim(int company) {
         if (company == 0) {
             HPRules hpRules = new HPRules();

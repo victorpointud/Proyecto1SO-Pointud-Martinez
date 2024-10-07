@@ -16,10 +16,16 @@ public enum WorkerTypeNumber {
     Director(7);
     private final int id;
     
+    /**
+     * Constructs a WorkerTypeNumber enum with the specified identifier.
+     */
     private WorkerTypeNumber(int id) {
 	this.id = id;
     }
     
+     /**
+     * Gets the unique identifier associated with the worker type.
+     */
     public int getId() {
 	return id;
     }

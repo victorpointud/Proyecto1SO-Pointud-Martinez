@@ -9,6 +9,9 @@ import Number.CompanyNumber;
 
 public class DELLRules extends CompanyRules {
 
+    /**
+     * Constructs a DELLRules object with predefined values specific to the DELL company.
+     */
     public DELLRules() {
 
         this.basePlatesNeedIt = 1;

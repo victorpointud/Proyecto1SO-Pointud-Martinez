@@ -41,6 +41,9 @@ public class Drive {
     private float earnings = 0;
     private int computersReleasedSinceLastGraphicsCard = 0;
     
+    /**
+     * Constructs a Drive with specified initial component counts.
+     */
     public Drive(int basePlates, int CPUs, int RAMs, int powerSupplies, int graphicsCards) {
         this.basePlates = basePlates;
         this.CPUs = CPUs;
@@ -48,7 +51,9 @@ public class Drive {
         this.powerSupplies = powerSupplies;
         this.graphicsCards = graphicsCards;
     }
-    
+    /**
+     * Constructs a Drive with zero counts for all components.
+     */
     public Drive() {
         this.basePlates = 0;
         this.CPUs = 0;
@@ -57,6 +62,9 @@ public class Drive {
         this.graphicsCards = 0;
     }
     
+    /**
+     * Adds a product to the drive based on the type of worker.
+     */
     public void addProduct(int productQty, WorkerTypeNumber type){
     
         switch(type) {
@@ -80,6 +88,9 @@ public class Drive {
         }
     }
 
+    /**
+     * Getters & Setters.
+     */
     public int getBasePlates() {
         return basePlates;
     }

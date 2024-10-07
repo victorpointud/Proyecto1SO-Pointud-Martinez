@@ -15,8 +15,14 @@ public class FileEntity {
     private int graphicsCards;
     private int integrators;
     
+    /**
+     * Default constructor for FileEntity.
+     */
     public FileEntity(){}
     
+    /**
+     * Constructs a FileEntity with specified values for various components.
+     */
     public FileEntity(int durationDay, int deadLineDays, int basePlates, int CPUs, int RAMs, int powerSupplies, int graphicsCards, int integrators) {
         this.durationDay = durationDay;
         this.deadLineDays = deadLineDays;
@@ -28,6 +34,10 @@ public class FileEntity {
         this.integrators = integrators;
     }
     
+    
+    /**
+     * Getters & Setters.
+     */
     public int getBasePlates() {
         return basePlates;
     }
