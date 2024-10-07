@@ -19,8 +19,16 @@ public class JSONStore {
     File dellFile = new File("./src/Store/DELLRules.json");
     File hpFile = new File("./src/Store/HPRules.json");
     
+    /**
+     * Default constructor for JSONStore.
+     */
     public JSONStore() {}
     
+    /**
+     * Retrieves the FileEntity object for a specific company type by reading the corresponding JSON file.
+     * @return The FileEntity object populated with the file data, or null if an error occurs.
+     * @throws IOException if there is an issue accessing the file.
+     */
     public FileEntity GetFile(CompanyNumber companyType) throws IOException {
         try { 
             File selectedFile = null;
@@ -41,6 +49,10 @@ public class JSONStore {
         }
     }
     
+    /**
+     * Writes the given FileEntity to the appropriate file based on the company type.
+     * @throws IOException if there is an issue writing to the file.
+     */
     public void setFile(FileEntity file, CompanyNumber companyType) throws IOException {
         try {
             File selectedFile = null;

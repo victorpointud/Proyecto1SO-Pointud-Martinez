@@ -1,4 +1,3 @@
-
 package Primitives;
 
 /*
@@ -12,14 +11,20 @@ public class Node {
     private Worker data;
     private Node pNext;
 
+    /**
+     * Constructs a Node with the specified Worker data.
+     */
     public Node(Worker data) {
         this.data = data;
     }
 
+    /**
+     * Getters & Setters.
+     */
     public Worker getData() {
         return data;
     }
-
+    
     public void setData(Worker data) {
         this.data = data;
     }

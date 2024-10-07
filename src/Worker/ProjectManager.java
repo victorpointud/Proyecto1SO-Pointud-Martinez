@@ -13,48 +13,69 @@ public class ProjectManager extends Worker {
 
     private Drive drive;
 
-    public ProjectManager(WorkerTypeNumber type, float cph, Semaphore m, CompanyRules gameRules, Drive drive) {
-        super(type, cph, m, gameRules);
+    /**
+     * Constructs a ProjectManager instance with the specified parameters.
+     */
+    public ProjectManager(WorkerTypeNumber type, float costPerHour, Semaphore mutex, CompanyRules companyRules, Drive drive) {
+        super(type, costPerHour, mutex, companyRules);
         this.drive = drive;
         this.hired = true;
     }
 
+    /**
+     * Represents the main loop of the Project Manager while they are hired.
+     */
     @Override
     public void run() {
         while (hired) {
             try {
-                double halfHour = getDayDuration() / 48;
-                int counter = 0;
-                while (counter < 16) {
-                    drive.setPmStatus(0); 
+                double halfHourDuration = (double) getDayDuration() / 48;
+                int workSessions = 0;
+
+                while (workSessions < 16) {
+                    drive.setPmStatus(0);
+
                     if (drive.getDirectorStatus() == 0) {
-                        drive.setFaults(drive.getFaults() + 1);
+                        int newFaults = drive.getFaults() + 1;
+                        drive.setFaults(newFaults);
+
                         drive.setSalaryDiscount(drive.getSalaryDiscount() + 50);
+
                         drive.getCostsMutex().acquire();
                         drive.setPmCost(drive.getPmCost() - 50);
                         drive.getCostsMutex().release();
                     }
-                    sleep(Math.round(halfHour));
-                    drive.setPmStatus(1); 
-                    sleep(Math.round(halfHour));
-                    counter++;
+
+                    sleep(Math.round(halfHourDuration));
+                    drive.setPmStatus(1);
+                    sleep(Math.round(halfHourDuration));
+                    workSessions++;
                 }
-                drive.setPmStatus(0); 
-                sleep(Math.round(halfHour * 16));
+
+                drive.setPmStatus(0);
+                sleep(Math.round(halfHourDuration * 16));
+
                 drive.getDaysMutex().acquire();
-                drive.setDaysUntilRelease(drive.getDaysUntilRelease() - 1);  
+                drive.setDaysUntilRelease(drive.getDaysUntilRelease() - 1);
                 drive.getDaysMutex().release();
+
                 drive.getCostsMutex().acquire();
                 drive.setPmCost(drive.getPmCost() + costPerHour * 24);
                 drive.getCostsMutex().release();
-            } catch (Exception e) {
-                System.out.println(e);
+
+            } catch (InterruptedException ex) {
+                System.err.println("Thread interrupted: " + ex.getMessage());
+            } catch (Exception ex) {
+                System.err.println("Unexpected error occurred: " + ex.getMessage());
             }
         }
     }
 
+    /**
+     * Placeholder for the work method. This must be implemented by derived classes.
+     */
     @Override
     public void Work() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        throw new UnsupportedOperationException("Work method is not implemented.");
     }
 }
