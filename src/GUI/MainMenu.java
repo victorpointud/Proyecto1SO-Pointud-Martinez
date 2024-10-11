@@ -29,9 +29,9 @@ public class MainMenu extends javax.swing.JFrame {
         BothButton = new javax.swing.JButton();
         ConfigurationButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         DELLButton = new javax.swing.JButton();
         HPButton = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
@@ -52,7 +52,7 @@ public class MainMenu extends javax.swing.JFrame {
                 BothButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(BothButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 450, 300, -1));
+        jPanel1.add(BothButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 440, 300, -1));
 
         ConfigurationButton.setBackground(new java.awt.Color(0, 0, 0));
         ConfigurationButton.setFont(new java.awt.Font("Algerian", 1, 24)); // NOI18N
@@ -67,9 +67,6 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/vs.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 550, 220));
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/VS_logo.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 300, 300));
 
         DELLButton.setBackground(new java.awt.Color(0, 0, 0));
         DELLButton.setFont(new java.awt.Font("Algerian", 1, 36)); // NOI18N
@@ -96,6 +93,9 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
         jPanel1.add(HPButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 180, 60));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logo_vs.png"))); // NOI18N
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-160, 280, 900, 300));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo-negrito.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, -60, 590, 500));
